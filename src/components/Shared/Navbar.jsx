@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -10,22 +11,22 @@ const Navbar = () => {
           </label>
           {/* Mobile menu bar */}
         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3  p-2 shadow bg-[#3A4256] text-white rounded-box w-52">
-          <li className=' mx-3'><a>Home</a></li>
-          <li className=' mx-3'><a className="justify-between"> Appointment </a></li>
-          <li className=' mx-3'><a>About</a></li>
+          <li className=' mx-3'><Link to='/'>Home</Link></li>
+          <li className=' mx-3'><Link to='/appointment'>Appointment</Link></li>
+          <li className=' mx-3'><Link to='/about'>About</Link></li>
         </ul>
       </div>
       <h1 className="btn btn-ghost normal-case text-xl">ToOOTH PICK</h1>
     </div>
     <div className="navbar-end hidden lg:flex">
       <ul className="menu menu-horizontal p-0">
-        <li className=' mx-3'><a>Home</a></li>
-        <li className=' mx-3'><a className="justify-between"> Appointment </a></li>
-        <li className=' mx-3'><a>About</a></li>
+        <li className=' mx-3'><Link to='/'>Home</Link></li>
+        <li className=' mx-3'><Link to='/appointment'>Appointment</Link></li>
+        <li className=' mx-3'><Link to='/about'>About</Link></li>
       </ul>
     </div>
       {/* <div className="navbar-end"> */}
-        <a className="btn">Log In</a>
+      <button className="btn"> <Link to='/login'>Log In</Link></button>
       <div className="dropdown dropdown-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
@@ -33,8 +34,8 @@ const Navbar = () => {
           </div>
         </label>
         <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-[#3A4256] text-white rounded-box w-52 ">
-          <li><a className="justify-end">Profile</a></li>
-          <li><a className="justify-end">Logout</a></li>
+          <li><Link to='/profile'>Profile</Link></li>
+          <li><Link to='/logout'>Log out</Link></li>
         </ul>
       </div>
     </div>
