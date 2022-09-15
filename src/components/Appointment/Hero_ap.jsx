@@ -1,20 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import chair from '../../assets/images/chair.png';
 import bg_hero from '../../assets/images/bg.png';
-// import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
-const Hero_ap = () => {
-  const [selectedDay, setSelectedDay] = useState(new Date());
-
-    // const footer = selectedDay ? (
-    //   <p>You selected {format(selectedDay, 'PPP')}.</p>
-    // ) : (
-    //   <p>Please pick a day.</p>
-    // );
-
-
-  
+const Hero_ap = ({selectedDay, setSelectedDay}) => {
   return (
     <div>
       <div
@@ -27,7 +16,6 @@ const Hero_ap = () => {
               mode="single"
               selected={selectedDay}
               onSelect={setSelectedDay}
-              // footer={footer}
             />
           </div>
         </div>

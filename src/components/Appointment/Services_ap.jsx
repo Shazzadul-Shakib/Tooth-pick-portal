@@ -1,9 +1,13 @@
+import { format } from 'date-fns';
 import React from 'react';
 
-const Services_ap = () => {
+const Services_ap = ({selectedDay}) => {
+      const footer = selectedDay ? 
+      `Available Services on ${format(selectedDay, 'PPP')}.`
+     : 'Please pick a day!';
   return (
     <div className=' m-10'>
-      <h5 className=' text-[#19D3AE] font-bold text-center' >Available Services on April 30, 2022</h5>
+      <h5 className=' text-[#19D3AE] font-bold text-center' >{ footer}</h5>
       <h5 className=' font-medium text-center text-[#939393]' >Please select a service.</h5>
       {/* cards section */}
       <div className=' my-10 grid grid-cols-1 gap-5 md:grid-cols-3'>
