@@ -5,6 +5,7 @@ import Appointment_h from './Appointment_h';
 
 import Hero from './Hero';
 import Services from './Services';
+import Testimonial from './Testimonial';
 const Home = () => {
   return (
     <div>
@@ -15,7 +16,9 @@ const Home = () => {
       {/* Services section */}
       <Services />
       {/* Appointment section*/}
-      <Appointment_h/>
+      <Appointment_h />
+      {/* Testimonial section */}
+      <Testimonial/>
     </div>
   );
 };
