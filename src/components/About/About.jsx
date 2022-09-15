@@ -1,5 +1,5 @@
 import React from 'react';
-import Contactus_ab from './Aboutus';
+import Aboutus from './Aboutus';
 import Hero_ab from './Hero_ab';
 
 const About = () => {
@@ -8,7 +8,7 @@ const About = () => {
       {/* Hero section  */}
       <Hero_ab />
       {/* Contact us section */}
-      <Contactus_ab/>
+      <Aboutus/>
     </div>
   );
 };
