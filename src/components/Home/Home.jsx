@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './About';
 import Appointment_h from './Appointment_h';
+import Contactus from './Contactus';
 
 
 import Hero from './Hero';
@@ -18,7 +19,9 @@ const Home = () => {
       {/* Appointment section*/}
       <Appointment_h />
       {/* Testimonial section */}
-      <Testimonial/>
+      <Testimonial />
+      {/* contact us section */}
+      <Contactus/>
     </div>
   );
 };
