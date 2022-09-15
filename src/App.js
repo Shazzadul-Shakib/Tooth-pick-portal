@@ -6,6 +6,7 @@ import Navbar from './components/Shared/Navbar';
 import Login from './components/Authentication/Login';
 import Logout from './components/Authentication/Logout';
 import Profile from './components/Authentication/Profile';
+import Footer from './components/Shared/Footer';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
         <Route path="logout" element={<Logout/>}></Route>
         <Route path="profile" element={<Profile/>}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
