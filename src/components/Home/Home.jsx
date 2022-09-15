@@ -1,5 +1,6 @@
 import React from 'react';
 import About from './About';
+import Appointment_h from './Appointment_h';
 
 
 import Hero from './Hero';
@@ -12,7 +13,9 @@ const Home = () => {
       {/* About section */}
       <About />
       {/* Services section */}
-      <Services/>
+      <Services />
+      {/* Appointment section*/}
+      <Appointment_h/>
     </div>
   );
 };
