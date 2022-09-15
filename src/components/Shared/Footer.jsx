@@ -1,8 +1,15 @@
 import React from 'react';
-
+import footer_bg from '../../assets/images/footer.png';
 const Footer = () => {
   return (
-    <div>
+    <div
+      style={{
+        background: `url('${footer_bg}')`,
+        backgroundSize: 'cover',
+        backgroundPosition:'center'
+      }}
+      className=' my-10'
+>
       <footer className="footer p-10 md:justify-around  text-[#3A4256]">
         <div>
           <span className="footer-title">Services</span> 
