@@ -2,7 +2,7 @@ import React from 'react';
 import clock from '../../assets/icons/clock.svg';
 import marker from '../../assets/icons/marker.svg';
 import phone from '../../assets/icons/phone.svg';
-const About = () => {
+const Aboutus = () => {
   return (
     <div className=' grid grid-cols-1 gap-5 m-5 md:grid-cols-3 '>
       {/* Card-1 */}
@@ -45,4 +45,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Aboutus;

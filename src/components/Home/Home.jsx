@@ -1,5 +1,5 @@
 import React from 'react';
-import About from './About';
+import About_h from './About_h';
 import Appointment_h from './Appointment_h';
 import Contactus from './Contactus';
 
@@ -13,7 +13,7 @@ const Home = () => {
       {/* Hero section */}
       <Hero/>
       {/* About section */}
-      <About />
+      <About_h />
       {/* Services section */}
       <Services />
       {/* Appointment section*/}
