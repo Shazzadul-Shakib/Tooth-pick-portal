@@ -1,9 +1,15 @@
 import React from 'react';
+import Hero_ap from './Hero_ap';
+import Services_ap from './Services_ap';
+
 
 const Appointment = () => {
   return (
     <div>
-      <h1>appointment here</h1>
+      {/* Appointment banner */}
+      <Hero_ap />
+      {/* Services section */}
+      <Services_ap/>
     </div>
   );
 };
