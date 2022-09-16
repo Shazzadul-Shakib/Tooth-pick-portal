@@ -8,6 +8,7 @@ import Logout from './components/Authentication/Logout';
 import Footer from './components/Shared/Footer';
 import Signup from './components/Authentication/Signup';
 import Yourappointment from './components/Authentication/Yourappointment';
+import Notfound from './components/Shared/Notfound';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         <Route path="logout" element={<Logout/>}></Route>
         <Route path="signup" element={<Signup/>}></Route>
         <Route path="yourappointment" element={<Yourappointment/>}></Route>
+        <Route path="*" element={<Notfound/>}></Route>
       </Routes>
       <Footer/>
     </div>
