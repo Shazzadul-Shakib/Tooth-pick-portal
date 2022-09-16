@@ -2,7 +2,7 @@ import React from 'react';
 
 const Yourappointment = () => {
   return (
-    <div className=' flex justify-center items-center'>
+    <div className=' flex justify-center items-center my-10'>
       <div className="overflow-x-auto w-3/4">
         <table className="table w-full">
           {/* <-- head --> */}
