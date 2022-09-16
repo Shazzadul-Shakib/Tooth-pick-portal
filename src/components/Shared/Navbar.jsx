@@ -45,7 +45,7 @@ const Navbar = () => {
               <h2 className="card-title justify-center">Shazzadul Islam Shakib</h2>
             <p className=' text-center'>shakib1186@gmail.com</p>
             <div className=' flex justify-center'>
-              <Link to='/yourappointment'><button className="btn btn-outline btn-accent  ">Your Appointments</button></Link>
+              <Link to='/yourappointment'><button className="btn btn-outline btn-accent  ">My Appointments</button></Link>
             </div>
             <div className="divider"></div> 
             <div className=' flex justify-center'>
