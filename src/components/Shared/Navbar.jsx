@@ -26,7 +26,7 @@ const Navbar = () => {
       </ul>
     </div>
       {/* <div className="navbar-end"> */}
-      <button className="btn"> <Link to='/login'>Log In</Link></button>
+       <Link to='/login'><button className="btn mr-2">Log In</button></Link>
       <div className="dropdown dropdown-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
