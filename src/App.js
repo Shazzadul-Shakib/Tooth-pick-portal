@@ -5,9 +5,9 @@ import About from './components/About/About';
 import Navbar from './components/Shared/Navbar';
 import Login from './components/Authentication/Login';
 import Logout from './components/Authentication/Logout';
-import Profile from './components/Authentication/Profile';
 import Footer from './components/Shared/Footer';
 import Signup from './components/Authentication/Signup';
+import Yourappointment from './components/Authentication/Yourappointment';
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
         <Route path="login" element={<Login/>}></Route>
         <Route path="logout" element={<Logout/>}></Route>
         <Route path="signup" element={<Signup/>}></Route>
-        <Route path="profile" element={<Profile/>}></Route>
+        <Route path="yourappointment" element={<Yourappointment/>}></Route>
       </Routes>
       <Footer/>
     </div>

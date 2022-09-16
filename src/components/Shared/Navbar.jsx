@@ -33,10 +33,26 @@ const Navbar = () => {
             <img src="https://placeimg.com/80/80/people" />
           </div>
         </label>
-        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-[#3A4256] text-white rounded-box w-52 ">
-          <li><Link to='/profile'>Profile</Link></li>
-          <li><Link to='/logout'>Log out</Link></li>
-        </ul>
+        {/* Profile card  */}
+          <div className=" dropdown-content card w-72 md:w-96 bg-[#3A4256] text-white shadow-xl">
+          <div className="card-body">
+            {/* Avatar section in card */}
+            <div className="avatar justify-center my-5">
+              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src="https://placeimg.com/192/192/people" />
+              </div>
+            </div>            
+              <h2 className="card-title justify-center">Shazzadul Islam Shakib</h2>
+            <p className=' text-center'>shakib1186@gmail.com</p>
+            <div className=' flex justify-center'>
+              <Link to='/yourappointment'><button className="btn btn-outline btn-accent  ">Your Appointments</button></Link>
+            </div>
+            <div className="divider"></div> 
+            <div className=' flex justify-center'>
+              <button className="btn btn-outline text-white">Log Out</button>
+            </div>
+            </div>
+          </div>
       </div>
     </div>
   // </div>
