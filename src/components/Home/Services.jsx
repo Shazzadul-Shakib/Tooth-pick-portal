@@ -3,6 +3,7 @@ import fluoride from '../../assets/images/fluoride.png';
 import cavity from '../../assets/images/cavity.png';
 import whitening from '../../assets/images/whitening.png';
 import treatment from '../../assets/images/treatment.png';
+import { Link } from 'react-router-dom';
 const Services = () => {
   return (
     <div className=' my-32'>
@@ -16,7 +17,7 @@ const Services = () => {
               <img className='  mb-8' src={fluoride} alt="clock" />
               <div className=' text-center'>
                 <h2 className=" text-xl mb-2">Fluoride Treatment</h2>
-                <p>Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the</p>
+                <p>Fluoride is a natural mineral that builds strong teeth and prevents cavities. It's been an essential oral health treatment for decades</p>
               </div>
             </div>
           </div>
@@ -28,7 +29,7 @@ const Services = () => {
               <img className=' mb-8' src={cavity} alt="clock" />
               <div className=' text-center'>
                 <h2 className=" text-xl mb-2">Cavity Filling</h2>
-                <p>Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the</p>
+                <p>A filling seals a hole, or cavity, in the tooth, preventing further damage, pain, and infection.</p>
               </div>
             </div>
           </div>
@@ -40,7 +41,7 @@ const Services = () => {
               <img className=' mb-8' src={whitening} alt="clock" />
               <div className=' text-center'>
                 <h2 className="text-xl mb-2">Teeth Whitening</h2>
-                <p>Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the</p>
+                <p>Teeth whitening is ideal for people who have healthy, unrestored teeth (no fillings) and gums.</p>
               </div>
             </div>
           </div>
@@ -53,8 +54,8 @@ const Services = () => {
           <img src={treatment} className=" max-w-auto md:max-w-sm rounded-lg shadow-2xl lg:mr-10" alt='Chair'/>
           <div>
             <h1 className="text-3xl font-bold">Exceptional Dental Care, <br/> on Your Terms</h1>
-            <p className="py-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page</p>
-            <button className="btn btn-success text-white">Get Started</button>
+            <p className="py-6">A person's smile is their most authentic form of self-expression. Your smile is an expression of your inner beauty. It's our goal to highlight and bring out that beauty through your smile. We are able to help our patients feel confident, excited and smile.</p>
+            <Link to='/appointment'> <button className="btn btn-success text-white">Book Now</button></Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,20 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import Spinner from './Spinner';
 
 const Navbar = () => {
+  const [user, loading] = useAuthState(auth);
+  
+  const logout = () => {
+  signOut(auth);
+};
+  if (loading) {
+    return <Spinner/>
+}
+
   return (
   <div className="navbar bg-base-100 justify-between">
     <div className="navbar-start">
@@ -16,7 +29,7 @@ const Navbar = () => {
           <li className=' mx-3'><Link to='/about'>About</Link></li>
         </ul>
       </div>
-      <h1 className="btn btn-ghost normal-case text-xl">ToOOTH PICK</h1>
+      <h1 className="btn btn-ghost normal-case text-xl text-[#19D3AE]">ToOOTH PICK</h1>
     </div>
     <div className="navbar-end hidden lg:flex">
       <ul className="menu menu-horizontal p-0">
@@ -26,11 +39,11 @@ const Navbar = () => {
       </ul>
     </div>
       {/* <div className="navbar-end"> */}
-       <Link to='/login'><button className="btn mr-2">Log In</button></Link>
-      <div className="dropdown dropdown-end">
+      
+      {user?<div className="dropdown dropdown-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            <img src="https://placeimg.com/80/80/people" />
+            <img src={user.photoURL}  alt='profile' />
           </div>
         </label>
         {/* Profile card  */}
@@ -39,21 +52,23 @@ const Navbar = () => {
             {/* Avatar section in card */}
             <div className="avatar justify-center my-5">
               <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://placeimg.com/192/192/people" />
+                 <img src={user.photoURL} alt='profile' />
               </div>
             </div>            
-              <h2 className="card-title justify-center">Shazzadul Islam Shakib</h2>
-            <p className=' text-center'>shakib1186@gmail.com</p>
+              <h2 className="card-title justify-center">{user.displayName}</h2>
+              <p className=' text-center'>{user.email}</p>
             <div className=' flex justify-center'>
               <Link to='/yourappointment'><button className="btn btn-outline btn-accent  ">My Appointments</button></Link>
             </div>
             <div className="divider"></div> 
             <div className=' flex justify-center'>
-              <button className="btn btn-outline text-white">Log Out</button>
+              <button
+                onClick={logout}
+                className="btn btn-outline text-white">Log Out</button>
             </div>
             </div>
           </div>
-      </div>
+      </div> : <Link to='/login'><button className="btn mr-2">Log In</button></Link>}
     </div>
   // </div>
   );

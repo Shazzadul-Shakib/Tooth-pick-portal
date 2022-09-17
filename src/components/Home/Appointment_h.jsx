@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bg from '../../assets/images/appointment.png';
 import doctor from '../../assets/images/doctor.png';
 
@@ -12,8 +13,8 @@ const Appointment_h = () => {
         <div className='flex-1 p-8'>
           <h5 className=' text-[#19D3AE] font-bold'>Appointment</h5>
           <h3 className=' text-white font-semibold text-3xl my-5'>Make an appointment Today</h3>
-          <p className='text-white font-semibold text-sm'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page</p>
-          <button className="btn btn-success text-white mt-8">Get Started</button>
+          <p className='text-white font-semibold text-sm my-6'>We provide sophisticated 3D Intraoral Scanning, Cosmetic Digital Smile Design, Laser dentistry along with standard services like Crowns, Bridges, Dental Implants, Braces and General Dentistry. All services are performed with precision and sophistication. The results are amazing. Thats why our clients come from as far away as USA, Canada, Switzerland, France, Germany, and many others. Dr. Shihabur Rahman is recognised by some of the nation’s top celebrities as the go-to dentist for dental beauty care.</p>
+          <Link to='/appointment'> <button className="btn btn-success text-white">Book Now</button></Link>
         </div>
       </div>
     </div>

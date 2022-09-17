@@ -1,5 +1,8 @@
 import React from 'react';
 import quotation from '../../assets/icons/quote.svg';
+import img1 from '../../assets/images/people1.png';
+import img2 from '../../assets/images/people2.png';
+import img3 from '../../assets/images/people3.png';
 const Testimonial = () => {
   return (
     <div className=' my-10 mx-10'>
@@ -21,12 +24,12 @@ const Testimonial = () => {
         <div className="card w-full  bg-white text-[#3A4256] drop-shadow-xl">
           <div className="card-body  justify-center items-center  ">
               <div className=' text-center my-10'>
-                <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
+                <p>Best Dentist and dental staff in the city ! The new office is amazing; state-of-the-art equipment & the decor rivals any high end office around. I actually look forward to going to the dentist again & again.</p>
             </div>
             <div className=' flex justify-center items-center'>
               <div className="avatar mr-5">
                 <div className="w-[75px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <img src="https://placeimg.com/192/192/people" />
+                  <img src={img1} alt='customer-1'/>
                 </div>
               </div>
               <div>
@@ -40,16 +43,16 @@ const Testimonial = () => {
         <div className="card w-full  bg-white text-[#3A4256] drop-shadow-xl">
           <div className="card-body  justify-center items-center  ">
               <div className=' text-center my-10'>
-                <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
+                <p>Great service and care! from front desk to the Doctor and the stuff . Dr. Shihabur Rahman is an awesome Dentist, also friendly, professional, and helpful. I am very happy and pleased with his work. Highly recommend everybody to go there and take their service.</p>
             </div>
             <div className=' flex justify-center items-center'>
               <div className="avatar mr-5">
                 <div className="w-[75px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <img src="https://placeimg.com/192/192/people" />
+                  <img src={img2} alt='customer-2'/>
                 </div>
               </div>
               <div>
-                <h6 className=' text-lg font-semibold text-[#19D3AE]'>Winson Herry</h6>
+                <h6 className=' text-lg font-semibold text-[#19D3AE]'>Mazon Carry</h6>
                 <p>California</p>
               </div>
             </div>
@@ -59,16 +62,16 @@ const Testimonial = () => {
         <div className="card w-full  bg-white text-[#3A4256] drop-shadow-xl">
           <div className="card-body  justify-center items-center  ">
               <div className=' text-center my-10'>
-                <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
+                <p>I’ve seen a lot of Dentists over my lifetime because I’ve had some serious dental issues. But my highest praise goes to Dr. Shihabur Rahman and his staffs . I was always very anxious going to the dentist but this time at LASER DENTAL, my experience was so painless and relaxed their was no discomfort whatsoever.</p>
             </div>
             <div className=' flex justify-center items-center'>
               <div className="avatar mr-5">
                 <div className="w-[75px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <img src="https://placeimg.com/192/192/people" />
+                  <img src={img3} alt='customer-3'/>
                 </div>
               </div>
               <div>
-                <h6 className=' text-lg font-semibold text-[#19D3AE]'>Winson Herry</h6>
+                <h6 className=' text-lg font-semibold text-[#19D3AE]'>Misi Torentto</h6>
                 <p>California</p>
               </div>
             </div>

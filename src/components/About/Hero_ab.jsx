@@ -1,6 +1,7 @@
 import React from 'react';
 import treatment from '../../assets/images/treatment.png';
 import bg_hero from '../../assets/images/bg.png';
+import { Link } from 'react-router-dom';
 
 const Hero_ab = () => {
   return (
@@ -12,7 +13,7 @@ const Hero_ab = () => {
           <div>
             <h1 className="text-5xl font-bold">Welcome to <span className=' text-[#19D3AE]' > ToOOTH PICK!</span></h1>
             <p className="py-6">"This is the finest place for dental arts and treatment. We maintain total hygienic condition and use world class equipments and materials. Book now and get an appointment for the best comfort and service."</p>
-            <button className="btn btn-success text-white">Book Now</button>
+            <Link to='/appointment'> <button className="btn btn-success text-white">Book Now</button></Link>
           </div>
         </div>
       </div>
