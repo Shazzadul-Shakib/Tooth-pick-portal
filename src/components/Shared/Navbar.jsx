@@ -1,15 +1,18 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Spinner from './Spinner';
 
 const Navbar = () => {
   const [user, loading] = useAuthState(auth);
+  const navigate = useNavigate();
   const logout = () => {
-  signOut(auth);
+    signOut(auth);
+    navigate('appointment');
   };
+
   if (loading) {
     return <Spinner />;
   }
@@ -43,7 +46,7 @@ const Navbar = () => {
             {user.photoURL ? <img src={user.photoURL} alt='profile' />
               : <div className="avatar placeholder">
                 <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
-                  <span className="text-xl">{ user.displayName.split(' ')[0].split('')[0]}</span>
+                  <span className="text-xl">{user?.displayName?.split(' ')[0].split('')[0]}</span>
                 </div>
               </div> }
           </div>
@@ -57,7 +60,7 @@ const Navbar = () => {
                 {user.photoURL ? <img src={user.photoURL} alt='profile' />
               : <div className="avatar placeholder">
                 <div className="bg-neutral-focus text-neutral-content rounded-full w-24">
-                  <span className="text-3xl uppercase">{ user.displayName.split(' ')[0].split('')[0]}</span>
+                  <span className="text-3xl uppercase">{user?.displayName?.split(' ')[0].split('')[0]}</span>
                 </div>
               </div> }
               </div>
