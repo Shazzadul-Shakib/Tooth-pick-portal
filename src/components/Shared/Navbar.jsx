@@ -13,8 +13,6 @@ const Navbar = () => {
   if (loading) {
     return <Spinner />;
   }
-  // let profileName =;
-
   return (
   <div className="navbar bg-base-100 justify-between">
     <div className="navbar-start">
@@ -38,8 +36,7 @@ const Navbar = () => {
         <li className=' mx-3'><Link to='/about'>About</Link></li>
       </ul>
     </div>
-      {/* <div className="navbar-end"> */}
-      
+      {/*profile section with avatar  */}
       {user?<div className="dropdown dropdown-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
@@ -80,7 +77,6 @@ const Navbar = () => {
           </div>
       </div> : <Link to='/login'><button className="btn mr-2">Log In</button></Link>}
     </div>
-  // </div>
   );
 };
 
