@@ -7,13 +7,13 @@ import Spinner from './Spinner';
 
 const Navbar = () => {
   const [user, loading] = useAuthState(auth);
-  
   const logout = () => {
   signOut(auth);
-};
+  };
   if (loading) {
-    return <Spinner/>
-}
+    return <Spinner />;
+  }
+  // let profileName =;
 
   return (
   <div className="navbar bg-base-100 justify-between">
@@ -43,7 +43,12 @@ const Navbar = () => {
       {user?<div className="dropdown dropdown-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            <img src={user.photoURL}  alt='profile' />
+            {user.photoURL ? <img src={user.photoURL} alt='profile' />
+              : <div className="avatar placeholder">
+                <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
+                  <span className="text-xl">{ user.displayName.split(' ')[0].split('')[0]}</span>
+                </div>
+              </div> }
           </div>
         </label>
         {/* Profile card  */}
@@ -52,7 +57,12 @@ const Navbar = () => {
             {/* Avatar section in card */}
             <div className="avatar justify-center my-5">
               <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                 <img src={user.photoURL} alt='profile' />
+                {user.photoURL ? <img src={user.photoURL} alt='profile' />
+              : <div className="avatar placeholder">
+                <div className="bg-neutral-focus text-neutral-content rounded-full w-24">
+                  <span className="text-3xl uppercase">{ user.displayName.split(' ')[0].split('')[0]}</span>
+                </div>
+              </div> }
               </div>
             </div>            
               <h2 className="card-title justify-center">{user.displayName}</h2>
